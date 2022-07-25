@@ -1,0 +1,1 @@
+echo -e "\e[31mRed\e[32mgreen\e[33myellow\e[34mblue\e[35mmagenta\e[36mcyan\e[om"
