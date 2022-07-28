@@ -1,8 +1,4 @@
-LOG_FILE=/tmp/roboshop.log
-
-#when we run multiple times, to remove the old output we are using below command
-rm -f $LOG_FILE
-
+source components/common.sh
 echo "Installing Nginx"
 
 yum install nginx -y &>>$LOG_FILE
@@ -15,7 +11,7 @@ rm -rf /usr/share/nginx/html/* $>>$LOG_FILE
 
 echo "Extract Frontend Content"
 cd /tmp
-unzip /tmp/frontend.zip $>>$LOG_FILE
+unzip -o /tmp/frontend.zip $>>$LOG_FILE
 
 echo "Copy Extracted Content to Nginx Path"
 cp -r frontend-main/static/* /usr/share/nginx/html/ &>>$LOG_FILE
