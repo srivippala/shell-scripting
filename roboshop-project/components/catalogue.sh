@@ -13,8 +13,9 @@ echo "Download catalogue code"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG_FILE
 
 echo "Extract Catalogue Code"
-cd /tmp/
-unzip -o catalogue.zip &>>$LOG_FILE
+cd /home/roboshop
+unzip /tmp/catalogue.zip
+
 
 echo "Clean Old COntent"
 rm -rf /home/roboshop/catalogue
