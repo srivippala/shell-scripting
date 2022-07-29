@@ -33,7 +33,7 @@ echo "Update Systemd file"
 sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/'
  /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
 
-echo "setup Catalogue SystemD file"
+echo "setup Catalogue SystemD  file"
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service &>>$LOG_FILE
 
 echo "Start catalogue"
