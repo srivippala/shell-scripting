@@ -24,7 +24,7 @@ echo "Copy Catalogue COntent"
 cp -r catalogue-main /home/roboshop/catalogue
 
 echo "Install NodeJs Dependencies"
-cd /home/roboshop/catalogue
+cd /home/roboshop/catalogue &>>$LOG_FILE
 npm install &>>$LOG_FILE
 
 chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
