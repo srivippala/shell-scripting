@@ -21,10 +21,10 @@ echo "Clean Old COntent"
 rm -rf /home/roboshop/catalogue
 
 echo "Copy Catalogue COntent"
-cp -r catalogue-main /home/roboshop/catalogue
+cp -r catalogue-main /home/roboshop/catalogue &>>$LOG_FILE
 
 echo "Install NodeJs Dependencies"
-cd /home/roboshop/catalogue &>>$LOG_FILE
+cd /home/roboshop/catalogue
 npm install &>>$LOG_FILE
 
 chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
