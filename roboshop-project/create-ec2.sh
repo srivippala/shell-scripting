@@ -3,6 +3,11 @@
 LOG=/tmp/instance-create.log
 rm -f $LOG
 
+if [ "$1" == "list" ]; then
+  aws ec2 describe-instance --query "Reservations[*].Instances[*].{PrivateIP:PrivateIpAddress,PublicIP:PrivateIpAddress,Name:Tags[?Key=='Name']|[0].Value,Status:State.Name}" --output table
+exit
+fi
+
 INSTANCE_CREATE() {
   INSTANCE_NAME=$1
   if [ -z "${INSTANCE_NAME}" ]; then
