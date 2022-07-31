@@ -14,7 +14,7 @@ stat()
 }
 
 
-NodeJS()
+NODEJS()
 {
 component=$1
 echo "Setup NodeJS Repo"

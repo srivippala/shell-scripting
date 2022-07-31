@@ -1,3 +1,3 @@
 source components/common.sh
 
-NodeJS user
+NODEJS user
