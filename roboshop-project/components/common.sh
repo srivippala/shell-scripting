@@ -62,7 +62,7 @@ sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/${componen
 stat $?
 
 echo "setup ${component} SystemD  file"
-mv /home/roboshop/${component}/systemd.service /etc/systemd/system/${component}.service &>>$LOG_FILE
+ mv /home/roboshop/${COMPONENT}/systemd.service  /etc/systemd/system/${COMPONENT}.service &>>$LOG_FILE
 stat $?
 
 echo "Start ${component}"
