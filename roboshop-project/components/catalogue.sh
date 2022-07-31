@@ -38,8 +38,7 @@ chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
 stat $?
 
 echo "Update Systemd file"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/'
-/home/roboshop/catalogue/systemd.service &>>$LOG_FILE
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service &>>$LOG_FILE
 stat $?
 
 echo "setup Catalogue SystemD  file"
