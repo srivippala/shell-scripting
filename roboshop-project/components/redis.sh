@@ -12,11 +12,11 @@ echo "Update redis configuration"
 if [ -f /etc/redis.conf ]; then
 sed -i -e "s/127.0.0.1/0.0.0.0/g" /etc/redis.conf
 elif [ -f /etc/redis/redis.conf ]; then
- sed -i -e "s/127.0.0.1/0.0.0.0/g" /etc/redis.conf
+ sed -i -e "s/127.0.0.1/0.0.0.0/g" /etc/redis/redis.conf
  fi
 stat $?
 
 echo "start redis"
 systemctl enable  redis  &>>$LOG_FILE
-systemctl start redis &>>$LOG_FILE
+systemctl restart redis &>>$LOG_FILE
 stat $?
