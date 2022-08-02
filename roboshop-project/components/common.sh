@@ -40,6 +40,7 @@ APP_USER_SETUP_WITH_APP() {
 }
 
 SYSTEMD_SETUP() {
+  COMPONENT=$1
   chown roboshop:roboshop /home/roboshop/ -R &>>$LOG_FILE
 
   echo "Update ${COMPONENT} SystemD file"
